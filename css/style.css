@@ -1,0 +1,293 @@
+/*Definimos variables*/
+:root{
+    --primario: #9c27b0;
+    --primarioOscuro: #89119d;
+    --secuandario: #ffce00;
+    --secundarioOscuro: rgb(233, 187, 2);
+    --blanco: #fff;
+    --negro: #000;
+
+    --fuentePrincipal: 'Be Vietnam Pro', sans-serif;
+    --fuenteSecundaria: 'Montserrat', sans-serif;
+}
+
+/*Globales*/
+
+/*Global de la web de PaulIrish para el control
+del margin, padding*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*para que un rem=10px y evitar estar haciendo conversiones*/
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  
+}
+
+/* Color del fondo */
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5; /*interlineado*/
+}
+
+/* Tamaño de letra y color en parrafos */
+p{
+    font-size: 1.8rem;
+    font-family: var(--fuenteSecundaria);
+    color:var(--blanco);
+}
+
+/* Estilo de enlaces */
+a{
+    text-decoration: none; /*quitaremos el interlineado*/ 
+}
+
+img{
+    width: 100%;
+}
+
+h1, h2, h3{
+    text-align: center;
+    color:var(--secuandario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+.contenedor{
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+/* Aplicando BEM*/
+/*posicion del header*/
+.header{
+    display: flex; 
+    justify-content: center; /* centra horizontalmente*/
+}
+
+/* posicion del logo*/
+.header__logo{
+    margin: 3rem 0; /* arriba y abajo izquierda y derecha*/
+}
+
+/*NAVEGACION*/
+/* Barra de navegacion*/
+.navegacion{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0; /* arriba y abajo   izquierda y derecha*/
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* separa cada uno de los elementos que hay en nav*/
+}
+
+/*Enlaces de la barra de navegacion*/
+.navegacion__enlace{ 
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+    /* en lugar del "gap" en .navegacion, aqui podriamos tener un: margin-rigth: 2rem;*/
+}
+
+/*navegacion__enlace--activo: deja el color secundario cuando estamos dentro de ese enlace*/
+/*cambiar el color del enlace cuando nos posicionamos en el:*/
+.navegacion__enlace--activo, 
+.navegacion__enlace:hover{
+    color: var(--secuandario);
+}
+
+.navegacion__enlace:last-of-type{  /*selecciona el segundo elemento de nav*/
+    margin-right: 0;
+}
+
+/* Grid   imagenes de productos en pag tienda*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2 1fr); /* indica 2 columnas*/
+    gap: 2rem; /*margen*/
+}
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr); /* en pantallas mas grandes tendremos 3 columnas*/
+    }
+}
+
+/* Productos */
+.producto{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+.producto__nombre{
+    font-size: 3rem;  
+}
+
+.producto__precio{
+    font-size: 2.4rem;
+    color: var(--secuandario);  
+}
+
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Graficos fotos con playeras puestas */
+.grafico{
+    min-height: 30rem;  /* para seguir teniendo el espacio para l aimagen grande en diseño movil*/
+    background-repeat: no-repeat;
+    background-size: cover;  /*llena todo el espacio*/
+}
+
+.grafico--camisas{  /*espacio para imagen grande */
+    grid-row: 2 / 3; /* espacio de arriba hacia abajo*/
+    grid-column: 1 / 3; /* numeros de arriba de izq a derecha*/
+    background-image: url(/img/grafico1.jpg);
+}
+
+.grafico--node{ /*espacio para imagen grande de camisa de node */
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+    grid-column: 1 / 3; 
+    
+}
+
+@media (min-width: 768px){
+    .grafico--node{ /*espacio para imagen grande de camisa de node */
+        grid-row: 5 / 6; 
+        grid-column: 2 / 4;
+    }
+  
+}
+
+
+/*FOOTER*/
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin: 2rem;
+}
+
+.footer__texto{
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+
+
+/* Pagina de Nosotros */
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2, auto); /*para que en movil se vea la imagen y abajo el texto*/ 
+}
+@media (min-width: 768px){
+    .nosotros{
+       
+        grid-template-columns: repeat(2, 1fr);    /* para tener dos columnas */
+        column-gap: 2rem; /* para separar las dos columnas */
+    }
+}
+
+.nosotros__imagen{
+    grid-row: 1/2;  /*posicionamos la imagen en la fila 1 a 2*/
+}
+
+@media (min-width: 768px){
+    .nosotros__imagen{
+        grid-column: 2/3;  /* posicionar para que en la pantalla grande se vea en la columna de 2 a 3*/
+    }
+  
+}
+
+/** Bloques **/
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* para tener 2 columnas en pantallas chiquitas*/
+    gap: 2rem; /*separacion entre columnas*/
+}
+
+/* para que en pantallas grandes se vean los 4 iconos en una fila*/
+@media (min-width: 768px){
+  .bloques{
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.bloque{
+    text-align: center;
+    font-size: 1rem;
+}
+.bloque__titulo{
+    margin: 0;
+}
+
+
+/* Pagina del Producto */
+
+@media (min-width: 768px){
+        .camisa {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+        }
+    }
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* boton de seleccionar talla y cantidad */
+.formulario__campo{  
+   /* border-color: var(--primarioOscuro);
+    border-width: 1rem;
+    border-style: solid;*/
+    border: 1rem solid var(--primarioOscuro);  /*es los mismo a las 3 lineas anteriores*/
+    background-color: transparent;
+   color: var(--blanco);
+   font-size: 2rem;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 1rem;
+   appearance: none;
+}
+
+/* estilo al boton "agregar al carrito */
+.formulario__submit{
+    background-color: var(--secuandario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .3s ease; /* hace la transicion del color
+                                             de fondo incial al que indicamos en hover*/
+
+    grid-column: 1/3;                                            }
+
+/* Cuando se le da estilo a un submit siempre pierde 
+el cursor en forma de manita al posicionarnos en el 
+para volverlo a tener agregamos un hover*/
+.formulario__submit:hover {
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);  /*al poner el cursor
+                                                 en al boton, hace que se vea 
+                                                 el fondo obscuro*/
+}

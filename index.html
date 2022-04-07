@@ -1,0 +1,189 @@
+<!--Aplicamos BEM para darle estilo al CSS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title>
+    <link rel="styesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="header"> <!--bloque, tendra un nombre de clase con una sola palabra-->
+        <!--Logo con enlace a pagina principal-->
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo FrontendStore"> <!--elemento del bloque, tendra el nombre de su clase con doble guion bajo-->
+        </a>
+    </header>
+
+
+    <!--Barra de navegacion-->
+    <nav class="navegacion"> <!--bloque-->
+        <a class="navegacion__enlace navegacion__enlace--activo"  href="index.html">TIENDA</a> <!--elemento del bloque-->
+       <!-- el nombre de la clase: navegacion__enlace--activo es un modificador, indica que sera diferente al anterior, lo
+        usaremos para dejar de color amarillo el enlace cuando se este en esa pagina --> 
+        <a class="navegacion__enlace" href="nosotros.html">NOSOTROS</a>
+    </nav>
+
+    <!-- Contenido -->
+    <main class="contenedor">
+        <h1>Nuestros productos</h1>
+
+        <div class="grid"> <!-- bloque con imagenes de los productos-->
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/1.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">VueJS</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/2.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">AngularJS</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/3.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">ReactJS</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/4.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">ReduxJS</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/5.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">Node.js</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/6.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">SASS</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/7.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">HTML5</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/8.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">GitHub</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/9.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">BulmaCSS</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/10.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">TypeScript</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/11.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">Drupal</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/12.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">JavaScript</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/13.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">GraphQL</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <div class="producto"> <!-- bloque de producto imagen, nombre y precio-->
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/14.jpg" alt="imagen caminsa gris">
+                    <div class="producto__informacion"> <!-- bloque para nombre y precio-->
+                        <p class="producto__nombre">Wordpress</p> 
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div> <!-- .producto-->
+
+            <!-- Imagenes alusivas de como se ven las camisas puestas-->
+            <div class="grafico grafico--camisas"></div>
+            <div class="grafico grafico--node"></div>
+        </div>
+    </main>
+
+    <!-- Pie de pagina -->
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - Todos los derechos Reservados 2022</p>
+    </footer>
+</body>
+</html>
